@@ -1,0 +1,43 @@
+.row {
+    display: grid;
+    grid-template-columns: 350px 350px 350px 350px;
+    column-gap: 10px;
+    padding-left: 50px;
+    background: #dcdcdc ;
+    padding-top: 20px;
+}
+.card {
+    background: #fff;
+    margin: 10px 10px;
+
+}
+.img {
+    max-width: 100%;
+}
+.title {
+    color: black;
+    font-size: 19px;
+    font-weight: bold;
+}
+.price{
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-left: 200px;
+}
+.description{
+    width: 200px;
+    margin-top:-20px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.stock {
+    margin-top: 10px;
+    font-size: 11px;
+    font-weight: bold;
+}
+.Botton {
+    margin-top: 4px;
+}
+
