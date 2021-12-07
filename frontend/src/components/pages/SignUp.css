@@ -1,0 +1,43 @@
+.container_signup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #242424;
+}
+
+.form{
+    max-width: 90%;
+    background-color: #cbcbcb;
+    height: 650px;
+    width: 550px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(176, 195, 230, 0.646);
+    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    filter: drop-shadow(0 6px 20px rgba(18, 98, 247, 0.017));
+    border-radius: 10px;
+    margin-top: 90px;
+}
+
+.title_signup{
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+
+.form-control{
+    margin-top: 20px;
+    padding: 17px;
+    width: 300px;
+}
+.form i {
+    font-size: 150px;
+    padding-top: 60px;
+}
+#lblClave{
+margin-bottom: 30px;
+}
+.btn--second{
+    padding: 17px;
+    width: 300px;
+}

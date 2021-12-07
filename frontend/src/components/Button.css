@@ -19,7 +19,7 @@
   .btn--second {
     background-color: var(--secundary);
     color: #fff;
-    border-radius: 20rem;
+    border: 1px solid var(--primary);
     
   }
   

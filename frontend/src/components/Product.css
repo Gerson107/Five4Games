@@ -1,11 +1,15 @@
-.row {
-    display: grid;
-    grid-template-columns: 350px 350px 350px 350px;
-    column-gap: 10px;
-    padding-left: 50px;
-    background: #dcdcdc ;
-    padding-top: 20px;
+
+@media(min-width: 770px) {
+    .row {
+        display: grid;
+        grid-template-columns: 350px 350px 350px ;
+        column-gap: 10px;
+        padding-left: 50px;
+        background: #dcdcdc ;
+        padding-top: 20px;
+    }
 }
+
 .card {
     background: #fff;
     margin: 10px 10px;
