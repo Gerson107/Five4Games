@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+const Role = require('../Models/role')
 const User = require('../Models/users');
 const Role = require('../config');
 
@@ -11,15 +12,15 @@ autorizar.verifyToken = async(req, res, next) => {
     })
     try{
         const decoded = jwt.verify(token, config.SECRET)
-        req.userId = decoded
-        const user = await User.findById(req.userId, {password:0})
+        req.userId = decoded.id
+        const user = await User.findById(req.userId)
         if(!user) return res.status(404).json({
             message: 'Usuario no encontrado'
-        })
+        });
         next();
     }catch(error){
         return res.status(401).json({
-            message: 'Autorizado'
+            message: 'No autorizado'
         })
 
     }
@@ -45,9 +46,4 @@ autorizar.isAdmin = async(req, res, next) => {
     }
 }
 
-autorizar.isAuditor = async(req, res, next) => {
-    try{
-        const user = await User.findById(req. userId);
-    const roles = await Role.find({_id: {$in: })})
-    }
-}
+module.exports = autorizar

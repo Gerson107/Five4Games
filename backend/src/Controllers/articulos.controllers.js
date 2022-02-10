@@ -27,6 +27,10 @@ articulosCtrl.getArticulo = async(req, res)=>{
     const articulo = await Articulo.findById(req.params.id)
     res.json(articulo)
 }
+articulosCtrl.getArticulop = async(req, res)=>{
+    const articulo = await Articulo.findByprecio(req.params.precio)
+    res.json(articulo)
+}
 
 articulosCtrl.deleteArticulo = async(req, res) => {
     await Articulo.findByIdAndDelete(req.params.id)
@@ -43,6 +47,6 @@ articulosCtrl.updateArticulo = async(req, res) => {
         precio,
         stock
     })
-    res.json('articulo a;adiso')
+    res.json('articulo añadido')
 }
 module.exports = articulosCtrl;

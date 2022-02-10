@@ -1,16 +1,16 @@
 const { Router } = require('express');
 const router = Router(); 
-const {getArticulos, createArticulo, getArticulo, deleteArticulo, updateArticulo} = require('../controllers/articulos.controllers');
-
+const {getArticulos, getArticulop, createArticulo, getArticulo, deleteArticulo, updateArticulo} = require('../controllers/articulos.controllers');
+const{autorizar, validar} = require('../middlewares')
 
 router.route('/')
     .get(getArticulos)
-    .post(createArticulo);
+    .post([autorizar.verifyToken, autorizar.isAdmin], createArticulo);
 
 router.route('/:id')
     .get(getArticulo)
-    .delete(deleteArticulo)
-    .put(updateArticulo)
+    .delete([autorizar.verifyToken, autorizar.isAdmin], deleteArticulo)
+    .put([autorizar.veryfyToken, autorizar.isAdmin], updateArticulo)
     
 
 

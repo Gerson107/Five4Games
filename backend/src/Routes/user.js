@@ -1,12 +1,10 @@
 const {Router} = require('express');
 const router = Router();
-const {getUsers, createUser, deleteUser} = require('../Controllers/users.controllers');
+const {crearUsuario} = require ('../Controllers/user.controller')
+const {autorizar, validar} = require ('../middlewares')
 
-router.route('/')
-    .get(getUsers)
-    .post(createUser);
+router.route('./')
+    .post([autorizar.verifyToken, validar.checkDuplicateUsernameOrEmail],crearUsuario)
 
-router.route('/:id')
-    .delete(deleteUser);
 
 module.exports = router;
